@@ -10,8 +10,9 @@ import React from "react"
 
 import { ThemeProvider as StyledProvider } from "styled-components"
 
-import theme from "@/common/styles/themes"
+import theme from "@/styles/themes"
 
 export const UseClientProvider: React.FC<React.PropsWithChildren> = (props) => {
+  // @ts-ignore-next-line
   return <StyledProvider theme={theme}>{props.children}</StyledProvider>
 }

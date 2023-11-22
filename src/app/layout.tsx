@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 
-import "@/common/styles/globals.css"
+import classNames from "classnames"
+
+import "@/styles/globals.css"
+
+import { bodoniModa, pretendard } from "@/styles/fonts/googleFonts"
 import StyledComponentsRegistry from "@/common/libs/styledComponents/StyledComponentRegistry"
-import theme from "@/common/styles/themes"
-
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "SPARCS Academic Relations Team",
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko-KR">
-      <body className={inter.className}>
+    <html lang="ko-KR" className={classNames(pretendard.variable, bodoniModa.variable)}>
+      <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
